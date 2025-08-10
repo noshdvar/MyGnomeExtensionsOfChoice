@@ -11,3 +11,5 @@ Audacity
 Gnome Tweaks (Optiomierungen)
 Refine
 KDEnlive
+OpenSnitch (Application Firewall, fragt bei jedem neuen Programm ob und in welchem Umfang es Verbindungen ins Netz aufbauen darf)
+UFW (Firewall Konsolenbasiert, GUI: GUFW)
