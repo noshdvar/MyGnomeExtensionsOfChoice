@@ -1,0 +1,35 @@
+# Flathub aktivieren
+https://flathub.org/setup/Debian
+
+# Best Tipps from Average Linux User for Debian 11:
+https://www.youtube.com/watch?app=desktop&v=VGvbn9Bn-gI
+
+## Some Bash Commands mentioned in the video above:
+### Install Build Essentials 
+sudo apt install build-essential dkms linux-headers-$(uname -r)
+
+### Install ubuntu-restricted-extras
+sudo apt install ttf-mscorefonts-installer rar unrar libavcodec-extra gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi
+
+### Install Microsoft Fonts Compatibility
+sudo apt install fonts-crosextra-carlito fonts-crosextra-caladea
+
+### Decrease swappiness (important for ssd users)
+cat /proc/sys/vm/swappiness # gives usually like 60 back.
+
+nano /etc/sysctl.conf
+#### add "vm.swappiness=10" at the end of the file
+#### CTRL & O to save
+#### CTRL & X to exit nano
+#### reboot your system.
+
+### Change Grub Boot Menu Waiting Time
+sudo nano /etc/default/grub
+#### Change "GRUB_TIMEOUT=5" to "GRUB_TIMEOUT=0"
+#### CTRL & O to save
+#### CTRL & X to exit nano
+sudo update-grub
+
+### Install UFW Firewall on Debian
+sudo apt install ufw
+sudo ufw enable
